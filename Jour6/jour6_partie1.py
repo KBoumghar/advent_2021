@@ -27,10 +27,4 @@ for i in range (numberOfDay):
     listCounter[6] += temp
     listCounter[8] = temp
 
-
-counter = 0
-
-for i in range(len(listCounter)):
-    counter += listCounter[i]
-
-print(counter)
+print(sum(listCounter))
