@@ -8,11 +8,14 @@ with open("input.txt") as f:
 for i in range(len(crabPositionList)):
     crabPositionList[i] = int(crabPositionList[i])
 
-goal = int(st.median(crabPositionList))
+goal = int(st.mean(crabPositionList))
+goal2 = int(st.mean(crabPositionList)) + 1
 
 counter = 0
 
 for i in range(len(crabPositionList)):
-    counter += abs(crabPositionList[i] - goal)
+
+    diff = abs(crabPositionList[i] - goal)
+    counter += (diff+1)*diff/2
 
 print(counter)
