@@ -7,10 +7,12 @@ with open("input.txt") as f:
 
 for x in instructionList:
     if "forward" in x:
-        horizontalPosition += int(x[len(x)-1])
+        increase = int(x[len(x)-1])
+        horizontalPosition += increase
+        verticalPosition += increase * aim
     elif "down" in x:
-        verticalPosition += int(x[len(x)-1])
+        aim += int(x[len(x)-1])
     else:
-        verticalPosition -= int(x[len(x)-1])
+        aim -= int(x[len(x)-1])
 
 print(verticalPosition*horizontalPosition)
