@@ -3,7 +3,6 @@ import os
 
 previous = float('inf')
 counter = 0
-numberList2 = ["1","2","3"]
 numberList = []
 with open("input.txt") as f:
     numberList = [line.rstrip() for line in f]
